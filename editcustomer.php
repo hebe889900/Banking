@@ -24,7 +24,7 @@ $rws=  mysql_fetch_array($result);
 <!DOCTYPE HTML>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="newcss.css"/>
+        <link rel="stylesheet" type="text/css" href="google.css"/>
         
         <title>staff editing</title>
         
@@ -32,6 +32,7 @@ $rws=  mysql_fetch_array($result);
     <?php include 'header.php'; ?>
         <div class='content_addstaff'>
     <?php include 'admin_navbar.php'?>
+        <section><
                 <div class='addstaff'>
                 <form action="alter_customer.php" method="POST">
             <table align="center">
@@ -92,6 +93,7 @@ $rws=  mysql_fetch_array($result);
         </form>
                 
         </div>
+        </section>
         </div>
                 
            

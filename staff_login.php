@@ -21,7 +21,6 @@ include 'header.php'; ?>
     <form action='' method='POST'>
         <table align="center">
             <tr><td><span class="caption">Staff Login</span></td></tr>
-            <tr><td colspan="2"><hr></td></tr>
             <tr><td>Username:</td></tr>
             <tr><td><input type="text" name="uname"></td></tr>
             <tr><td>Password:</td></tr>

@@ -14,9 +14,10 @@ if(!isset($_SESSION['admin_login']))
     </head>
 
 <?php include 'header.php'; ?>
-    
+        
         <div class='content_addstaff'>
             <?php include 'admin_navbar.php'?>
+            <section>
             <div class='addstaff'>
         <form action="add_staff.php" method="POST">
              <table align='center'>
@@ -93,6 +94,7 @@ if(!isset($_SESSION['admin_login']))
                 </table>
         </form>
                 </div>
+                </section>
         </div>
 <?php include 'footer.php';?>
     </body>

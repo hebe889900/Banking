@@ -10,11 +10,12 @@ if(!isset($_SESSION['admin_login']))
         <meta charset="UTF-8">
         <title>Add Customer</title>
         
-        <link rel="stylesheet" href="newcss.css">
+        <link rel="stylesheet" href="google.css">
     </head>
 <?php include 'header.php'; ?>
 <div class='content_addstaff'>
     <?php include 'admin_navbar.php'?>
+    <section>
             <div class='addstaff'>
 
 <form action="add_customer.php" method="POST">
@@ -49,9 +50,9 @@ if(!isset($_SESSION['admin_login']))
                     </td>
                     <td>
                         <select name="branch">
-                            <option>KOLKATA</option>
-                            <option>DELHI</option>
-                            <option>BANGALORE</option>
+                            <option>Toronto</option>
+                            <option>Ottawa</option>
+                            <option>Vancouver</option>
                             
                         </select>
                     </td>
@@ -60,9 +61,12 @@ if(!isset($_SESSION['admin_login']))
                     <td>Account type</td>
                     <td>
                         <select name="customer_account">
-                            <option>savings</option>
-                            <option>current</option>
-                            
+                            <option>Offering</option>
+                            <option>Savings</option>
+                            <option>Checking</option>
+                            <option>Money Market</option>
+                            <option>CD</option>
+                            <option>IRA CD</option>
                         </select>
                     </td>
                 </tr>
@@ -89,12 +93,14 @@ if(!isset($_SESSION['admin_login']))
                     <td><input type="password" name="customer_pwd" required=""/></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align='center' style='padding-top:20px'><input type="submit" name="add_customer" value="Add Customer" class="addstaff_button"/></td>
+                    <td colspan="2" align='center' style='padding-top:20px'><input type="submit" name="add_customer" value="Add Customer" class="submit-button"/></td>
                 </tr>
             </table>
             </div>
     </div>
         </form>
+        </div>
+        </section>
 <?php include 'footer.php';?>
     </body>
 </html>

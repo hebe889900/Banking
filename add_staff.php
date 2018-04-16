@@ -20,5 +20,5 @@ $password=  mysql_real_escape_string($_REQUEST['staff_pwd']);
 $sql="insert into staff values('','$name','$dob','$status','$dept','$doj','$address','$mobile',
     '$email','$password','$gender','')";
 mysql_query($sql) or die("the email-id is already registered");
-header('location:admin_hompage.php');
+header('location:admin_homepage.php');
 ?>

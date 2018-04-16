@@ -36,6 +36,7 @@ if(isset($_REQUEST['submitBtn'])){
 else{
     header('location:index.php');  
 }}
+$pages = 'home';
 ?>
 <?php 
 session_start();
@@ -61,85 +62,101 @@ if(isset($_SESSION['customer_login']))
 <body class="devsite-doc-page devsite-full-width-page devsite-header-no-lower-tabs no-touch" data-family="endorsed" id="top_of_page">
     <div class="devsite-wrapper">
         <?php include 'header.php' ?>
-        <div class="user_login">
-            <form action='' method='POST'>
-                <table align="left">
-                    <tr>
-                        <td><span class="caption">Secure Login</span></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <hr>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Username:</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="uname" required>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Password:</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="password" name="pwd" required>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="button1">
-                            <input type="submit" name="submitBtn" value="Log In" class="button">
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-
-        <div class="image">
-            <img src="home.jpg" height="100%" width="100%" />
-            <div class="text">
-
-                <a href="safeonlinebanking.php"><h3>Click to read safe online banking tips</h3></a>
-                <a href="t&c.php"><h3>Terms and conditions</h3></a>
-                <a href="faq.php"><h3>FAQ'S</h3></a>
-
+        <div id = "gc-wrapper">
+            <div class = "devsite-main-content clearfix">
+                <section class = "background-grey full-bleed-section">
+                    <div class = "l-max-width-standard l-pad-top-7 wall">
+                        <article class = "page no-article-survey">
+                            <form class = "cf center" action='' method='POST'>
+                                <h1 class="contact-form__title">Secure Login</h1>
+                                <div class="field" data-contact-form-field-required="true" data-page="1" data-type="TEXT">
+                                    <label class="cc" for="username">
+                                        <span class="contact-form-label__text">Username</span>
+                                        <span> *</span></label>
+                                        <input id="username" maxlength="1000" name="uname" type="text">
+                                </div>
+                                <div class="field" data-contact-form-field-required="true" data-page="1" data-type="TEXT">
+                                    <label class="cc" for="password">
+                                        <span class="contact-form-label__text">Password</span>
+                                        <span> *</span></label>
+                                        <input id="password" maxlength="1000" name="pwd" type="password">
+                                </div>
+                                <div class="button-bar">
+                                    <span class="notification-area" tabindex="-1">* Required field</span>
+                                    <div class="buttons">
+                                        <div class="mspin mspin-small submit-spin" style="display: none;"></div>
+                                        <button class="submit-button" type="submit" name="submitBtn" value="Log In">Submit</button>
+                                    </div>
+                                </div>                                 
+                                <div class = "contact-form__intro cc">
+                                    <p>Our internet banking portal provides personal banking services that gives you complete control over all your banking demands online.</p>
+                                    <h3>Features</h3>
+                                    <ul>
+                                        <li>Registration for online banking</li>
+                                        <li>Adding Beneficiary account</li>
+                                        <li>Funds Transfer</li>
+                                        <li>Last Login record</li>
+                                        <li>Mini Statement</li>
+                                        <li>ATM and Cheque Book</li>
+                                        <li>Staff approval Feature</li>
+                                        <li>Account Statement by date</li>
+                                    </ul>
+                                </div>   
+                            </form>                                                          
+                        </artical>
+                    </div>
+                </section>
+                <?php include 'footer.php' ?>                    
             </div>
         </div>
-
-        <div class="left_panel">
-            <p>Our internet banking portal provides personal banking services that gives you complete control over all your banking demands online.</p>
-            <h3>Features</h3>
-            <ul>
-                <li>Registration for online banking</li>
-                <li>Adding Beneficiary account</li>
-                <li>Funds Transfer</li>
-                <li>Last Login record</li>
-                <li>Mini Statement</li>
-                <li>ATM and Cheque Book</li>
-                <li>Staff approval Feature</li>
-                <li>Account Statement by date</li>
-
-            </ul>
-        </div>
-
-        <div class="right_panel">
-
-            <h3>PERSONAL BANKING</h3>
-            <ul>
-                <li>Personal Banking application provides features to administer and manage non personal accounts online.</li>
-                <li>Phishing is a fraudulent attempt, usually made through email, phone calls, SMS etc seeking your personal and confidential information.</li>
-                <li>Online Bank or any of its representative never sends you email/SMS or calls you over phone to get your personal information, password or one time SMS (high security) password.</li>
-                <li>Any such e-mail/SMS or phone call is an attempt to fraudulently withdraw money from your account through Internet Banking. Never respond to such email/SMS or phone call. Please report immediately on reportif you receive any such email/SMS or Phone call. Please lock your user access immediately.
-                </li>
-            </ul>
-        </div>
-        <?php include 'footer.php' ?>
     </div>
 </body>
+<script src="js/google.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/script_foot_closure.js"></script>
+<script src="js/script_foot.js"></script>
+<script>
+var a = window.devsite || {};
+window.devsite = a;
+a.readyCallbacks = [];
+window.devsite.readyCallbacks = a.readyCallbacks;
+a.ready = function(b) {
+    a.readyCallbacks.push(b)
+};
+window.devsite.ready = a.ready;
+  $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '81777',
+        'bucket': '',
+        'context': 'Maps JS API v3',
+        'version': 'devsite-20180226-r03-rc00.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });    
+        (function($) {
+          
+          devsite.devsite.Init($, {'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'VERSION_HASH': '9abbcf9aa7', 'SITE_NAME': 'devsite', 'HISTORY_ENABLED': 1, 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.anvato.com', '.apigee.com', '.appspot.com', '.dialogflow.com', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.nest.com', '.openthread.io', '.openweave.io', '.orbitera.com', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0, 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com', 'VTAGS_ENABLED': 0},
+                               '[]','en',
+                               true, 'rufwork@gmail.com',
+                               {"f62218c009ec029abef196bba5aa34cf": true, "8de7a048f21618359bd37f5ce44be073": false, "098dafe57affddc137df300142652cfd": false, "8e03e230de0bd8a6fe173fdf172e8b3f": true, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "752953480de00a336d911a46966cc16d": false, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true}, '/maps/documentation/javascript/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+
+      </script><script>
+      $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+      </script>
 </html>        
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+

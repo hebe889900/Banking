@@ -20,5 +20,5 @@ $sql="UPDATE customer SET  name='$name', dob='$dob', nominee='$nominee', account
      address='$address', 
         mobile='$mobile', gender='$gender' WHERE id='$id'";
 mysql_query($sql) or die(mysql_error());
-header('location:admin_hompage.php');
+header('location:admin_homepage.php');
 ?>

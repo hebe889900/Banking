@@ -12,7 +12,7 @@ if(isset($_SESSION['admin_login']))
         <meta charset="UTF-8">
         <title>Admin Login - Online Banking</title>
         
-        <link rel="stylesheet" href="newcss.css">
+        <link rel="stylesheet" href="google.css">
     </head>
 <?php
 include 'header.php'; ?>
@@ -22,12 +22,11 @@ include 'header.php'; ?>
     <form action='' method='POST'>
         <table align="center">
             <tr><td><span class="caption">Admin Login</span></td></tr>
-            <tr><td colspan="2"><hr></td></tr>
             <tr><td>Username:</td></tr>
             <tr><td><input type="text" name="uname" required></td></tr>
             <tr><td>Password:</td></tr>
             <tr><td><input type="password" name="pwd" required></td></tr>
-            <tr><td class="button1"><input type="submit" name="submitBtn" value="Log In" class="button"></td></tr>
+            <tr><td class="button1"><input type="submit" name="submitBtn" value="Log In" class="submit-button"></td></tr>
         </table>
     </form>
             </div>

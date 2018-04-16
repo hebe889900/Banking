@@ -14,6 +14,7 @@
        
     </head>
         <?php include 'header.php' ?>
+        <section>
         <div class='content_customer'>
             <h3 style="text-align:center;color:#2E4372;"><u>Safe Online Banking Tips</u></h3>
               
@@ -33,3 +34,4 @@
             <li>Change your Internet Banking password at periodical intervals.</li>
             <li>Always check the last log-in date and time in the post login page.</li>
             </ul>
+        </section

@@ -36,12 +36,13 @@ if(!isset($_SESSION['customer_login']))
         <meta charset="UTF-8">
         <title>Home - Online Banking</title>
         
-        <link rel="stylesheet" href="newcss.css">
+        <link rel="stylesheet" href="google.css">
     </head>
         <?php include 'header.php' ?>
         <div class='content_customer'>
             
            <?php include 'customer_navbar.php'?>
+           <section>
             <div class="customer_top_nav">
              <div class="text">Welcome <?php echo $_SESSION['name']?></div>
             </div>
@@ -71,6 +72,7 @@ if(!isset($_SESSION['customer_login']))
             
             
         </div>
+        </section>
     
                <?php include 'footer.php';?>
             

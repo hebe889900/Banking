@@ -6,19 +6,19 @@
                 <button type="button" class="devsite-expand-section-nav devsite-header-icon-button
                                        button-flat material-icons gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Hamburger menu"></button>
                     <div class="devsite-product-name-wrapper">
-                        <a href="https://cloud.google.com/" class="devsite-site-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site logo"><img src="header.png" class="devsite-site-logo" alt="Google Cloud"><span class="devsite-site-name devsite-product-name">Google Cloud</span></a>
+                        <a href="https://cloud.google.com/" class="devsite-site-logo-link gc-analytics-event" data-category="Site-Wide Custom Events" data-label="Site logo"><img src="header.png" class="devsite-site-logo" alt="Google Cloud"><span class="devsite-site-name devsite-product-name">Online Banking</span></a>
                     </div>
                     <div class="devsite-header-upper-tabs">
                         <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
                             <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
                                 <li class="devsite-doc-set-nav-tab-container devsite-nav-tab">
-                                    <a class="devsite-doc-set-nav-active devsite-nav-tab
-            devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" href="index.php">Home </a>
+                                    <a class=" devsite-nav-tab
+                devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event  <?php if($pages=='home'){echo 'devsite-doc-set-nav-active';}?>" href="index.php">Home </a>
                                 </li>
-                                <li class="devsite-doc-set-nav-tab-container devsite-nav-tab"><a class="devsite-doc-set-nav-active devsite-nav-tab
-            devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" href="features.php">Features </a></li>
-                                <li class="devsite-doc-set-nav-tab-container devsite-nav-tab" id="last"><a class="devsite-doc-set-nav-active devsite-nav-tab
-            devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event" href="contact.php">Contact Us</a></li>
+                                <li class="devsite-doc-set-nav-tab-container devsite-nav-tab"><a class="devsite-nav-tab
+                devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event  <?php if($pages=='features'){echo 'devsite-doc-set-nav-active';}?>" href="features.php">Features </a></li>
+                                <li class="devsite-doc-set-nav-tab-container devsite-nav-tab" id="last"><a class="devsite-nav-tab
+            devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event <?php if($pages=='contact'){echo 'devsite-doc-set-nav-active';}?>" href="contact.php">Contact Us</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -28,6 +28,7 @@
     </header>    
 </div>
 <div>
+<div class="devsite-site-mask"></div>
 <nav class = "devsite-nav-responsive devsite-nav nocontent">
     <div class = "devsite-nav-responsive-tabs-panel">
         <nav class = "devsite-nav-responsive-tabs devsite-nav">

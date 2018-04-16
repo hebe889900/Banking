@@ -17,23 +17,38 @@
     <link rel="stylesheet" href="google.css">
 
 </head>
-<?php include 'header.php' ?>
-    <div class='content_customer'>
-        <h3 style="text-align:center;color:#2E4372;"><u>Online Banking features</u></h3>
-        <ul>
-            <li>Registration for online banking by Admin. </li>
-            <li>Adding Beneficiary account by customer.</li>
-            <li> Transferring amount to the beneficiary added by customer. </li>
-            <li>Staff must approve for beneficiary activation before it can be used for transferring funds. </li>
-            <li>Customer gets to know his last login date and time each time he logs in.</li>
-            <li>Customer can check last 10 transactions made with their account.</li>
-            <li>Customer can check their account statement within a date range.</li>
+<?php $pages = 'features'; include 'header.php'; ?>
+        <div id = "gc-wrapper">
+            <div class = "devsite-main-content clearfix">
+                <section class = "background-grey full-bleed-section">
+                    <div class = "l-max-width-standard l-pad-top-7 wall">
+                        <article class = "page no-article-survey">
+                            <form class = "cf" action='' method='POST'>                               
+                                <div class = "contact-form__intro cc">
+                                    <div class='contact-form__intro cc'>
+                                        <h3 style="text-align:center;color:#2E4372;"><u>Online Banking features</u></h3>
+                                        <ul>
+                                            <li>Registration for online banking by Admin. </li>
+                                            <li>Adding Beneficiary account by customer.</li>
+                                            <li> Transferring amount to the beneficiary added by customer. </li>
+                                            <li>Staff must approve for beneficiary activation before it can be used for transferring funds. </li>
+                                            <li>Customer gets to know his last login date and time each time he logs in.</li>
+                                            <li>Customer can check last 10 transactions made with their account.</li>
+                                            <li>Customer can check their account statement within a date range.</li>
 
-            <li>Customer can request for ATM and Cheque Book.</li>
-            <li>Staff will approve requests for ATM card and cheque book. </li>
-            <li> Admin can add/edit/delete customer as well as staff. </li>
-            <li> All three of them(customer, staff & admin) can change their password. </li>
-            <li>Staff and Admin Login pages are hidden from customer for security purpose.</li>
-            <li>Passwords are stored as encrypted hashes with an additional random salt for added security.</li>
-        </ul>
-    </div>
+                                            <li>Customer can request for ATM and Cheque Book.</li>
+                                            <li>Staff will approve requests for ATM card and cheque book. </li>
+                                            <li> Admin can add/edit/delete customer as well as staff. </li>
+                                            <li> All three of them(customer, staff & admin) can change their password. </li>
+                                            <li>Staff and Admin Login pages are hidden from customer for security purpose.</li>
+                                            <li>Passwords are stored as encrypted hashes with an additional random salt for added security.</li>
+                                        </ul>
+                                    </div>
+                                </div>   
+                            </form>                                                          
+                        </artical>
+                    </div>
+                </section>
+                <?php include 'footer.php' ?>                    
+            </div>
+        </div>

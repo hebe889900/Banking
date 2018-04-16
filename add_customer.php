@@ -45,5 +45,5 @@ mysql_query($sql) or die("Email already exists!");
 mysql_query($sql1) or die(mysql_error());
 $sql4="insert into passbook".$id." values('','$date','$name','$branch','$ifsc','$credit','0','$credit','Account Open')";
 mysql_query($sql4) or die(mysql_error());
-header('location:admin_hompage.php');
+header('location:admin_homepage.php');
 ?>
